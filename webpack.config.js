@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './wwwroot/js/index.js', // Your main React file
+    entry: './wwwroot/js/index.js',
     output: {
         path: path.resolve(__dirname, 'wwwroot/dist'),
         filename: 'bundle.js',
@@ -17,6 +17,10 @@ module.exports = {
                         presets: ['@babel/preset-env', '@babel/preset-react'],
                     },
                 },
+            },
+            {
+                test: /\.css$/, // Add this rule
+                use: ['style-loader', 'css-loader'],
             },
         ],
     },

@@ -1,33 +1,120 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-nav ul {
-    list-style: none;
+/* General reset */
+body, html {
+    margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-    nav ul li {
-        display: inline;
-        margin-right: 10px;
+/* Navigation */
+nav {
+    background-color: #343A40 !important; /* Soft Black */
+}
+
+    nav a {
+        color: #F5F5F5 !important; /* White */
     }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #007bff;
-        }
+/* Home Section */
+#home {
+    background-image: url('/images/frybread-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    text-align: center;
+    color: #343A40; /* Soft Black */
+}
+
+    /* Overlay in the Home Section */
+    #home .overlay {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #home h2, #home p {
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    /* Adjustments to Text in the Home Section */
+    #home .text-center {
+        max-width: 700px;
+        margin: auto;
+    }
+
+
+/* Blog Section */
+#blog {
+    background-color: #F5F5F5; /* White */
+    padding: 50px 0;
+    color: #343A40; /* Soft Black */
+}
 
 .blog-post {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
+    background-color: #ECECEC !important; /* Soft Neutral for blog posts */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
     .blog-post h2 {
-        margin-top: 0;
+        color: #D62828 !important; /* Deep Red for Headings */
     }
 
-section {
-    margin: 20px 0;
+/* About Section */
+#about {
+    background-color: #ECECEC !important; /* Soft Neutral */
+    padding: 50px 0;
+    color: #343A40 !important; /* Soft Black */
+}
+
+/* Buttons and Links */
+button, a.btn {
+    background-color: #F9C74F !important; /* Golden Yellow */
+    color: #343A40 !important; /* Soft Black */
+}
+
+    button:hover, a.btn:hover {
+        background-color: #D62828 !important; /* Deep Red on Hover */
+        color: #F5F5F5 !important; /* White */
+    }
+
+/* Bootstrap Overrides */
+.btn-primary {
+    color: #fff !important;
+    background-color: #1b6ec2 !important; /* Blue background */
+    border-color: #1861ac !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff !important;
+    background-color: #1b6ec2 !important; /* Blue background for active nav pill */
+    border-color: #1861ac !important;
+}
+
+/* Utility Classes */
+.border-top {
+    border-top: 1px solid #e5e5e5 !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5 !important;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05) !important;
+}
+
+/* Footer */
+footer.footer {
+    position: relative !important; /* Changed from absolute to relative */
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: normal;
+    background-color: #343A40 !important; /* Ensure your custom footer background */
+    color: #F5F5F5 !important;
+    padding: 20px 0 !important;
+    text-align: center !important;
 }
